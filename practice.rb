@@ -39,15 +39,16 @@ blockchain = [
 
 # end
 
-ben = blockchain[0]["amount"] + blockchain[6]["amount"] - blockchain[2]["amount"] - blockchain[5]["amount"]
-puts "Ben's KelloggCoin balance is #{ben}"
+ben_balance = 0
 
-brian = blockchain[1]["amount"] - blockchain[3]["amount"] 
-evan = blockchain[2]["amount"] - blockchain[4]["amount"] + blockchain[7]["amount"] 
-anthony = blockchain[3]["amount"] + blockchain[4]["amount"] + blockchain[5]["amount"] - blockchain[6]["amount"] - blockchain[7]["amount"] 
-puts "Brian's KelloggCoin balance is #{brian}"
-puts "Evan's KelloggCoin balance is #{evan}"
-puts "Anthony's KelloggCoin balance is #{anthony}"
+
+for transaction in blockchain
+  if transaction ["from_user"] == "ben"
+    ben_balance = ben_balance - transaction["amount"]
+  end
+end
+
+puts "#{ben_balance}"
 
 
 
