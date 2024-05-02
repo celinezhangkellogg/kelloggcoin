@@ -27,3 +27,28 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+
+# index = 0
+# loop do 
+# if index == blockchain.size
+#   break
+# end
+
+# p blockchain[index]["amount"]
+# index = index + 1
+
+# end
+
+ben = blockchain[0]["amount"] + blockchain[6]["amount"] - blockchain[2]["amount"] - blockchain[5]["amount"]
+puts "Ben's KelloggCoin balance is #{ben}"
+
+brian = blockchain[1]["amount"] - blockchain[3]["amount"] 
+evan = blockchain[2]["amount"] - blockchain[4]["amount"] + blockchain[7]["amount"] 
+anthony = blockchain[3]["amount"] + blockchain[4]["amount"] + blockchain[5]["amount"] - blockchain[6]["amount"] - blockchain[7]["amount"] 
+puts "Brian's KelloggCoin balance is #{brian}"
+puts "Evan's KelloggCoin balance is #{evan}"
+puts "Anthony's KelloggCoin balance is #{anthony}"
+
+
+
+
